@@ -1,3 +1,4 @@
+
 public class Course {
 
     public String code;
