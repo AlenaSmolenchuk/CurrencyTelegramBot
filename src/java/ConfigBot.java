@@ -25,9 +25,9 @@ public class ConfigBot<def> extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        if(update.hasMessage()){
-            if(update.getMessage().hasText()){
-                if(update.getMessage().getText().equals("/start")){
+        if (update.hasMessage()) {
+            if (update.getMessage().hasText()) {
+                if (update.getMessage().getText().equals("/start")) {
                     try {
                         Parser parser = new Parser();
                         parser.parseUrl();
@@ -39,7 +39,7 @@ public class ConfigBot<def> extends TelegramLongPollingBot {
                     }
                 }
             }
-        }else if(update.hasCallbackQuery()){
+        } else if (update.hasCallbackQuery()) {
             try {
                 SendMessage message = new SendMessage();
                 message.setChatId(String.valueOf(update.getCallbackQuery().getMessage().getChatId()));
@@ -58,35 +58,35 @@ public class ConfigBot<def> extends TelegramLongPollingBot {
         List<InlineKeyboardButton> keyboardButtonsRow3 = new ArrayList<>();
         List<InlineKeyboardButton> keyboardButtonsRow4 = new ArrayList<>();
         List<InlineKeyboardButton> keyboardButtonsRow5 = new ArrayList<>();
-        for (int i = 0; i < 7; i++){
+        for (int i = 0; i < 7; i++) {
             keyboardButtonsRow1.add(new InlineKeyboardButton().builder()
                     .text(parser.Courses.get(i).getCode())
                     .callbackData(parser.Courses.get(i).getAmount()
                             + " " + parser.Courses.get(i).getCode() + " = "
                             + parser.getCourse(parser.Courses.get(i).getCode()) + " RUB").build());
         }
-        for (int i = 7; i < 14; i++){
+        for (int i = 7; i < 14; i++) {
             keyboardButtonsRow2.add(new InlineKeyboardButton().builder()
                     .text(parser.Courses.get(i).getCode())
                     .callbackData(parser.Courses.get(i).getAmount()
                             + " " + parser.Courses.get(i).getCode() + " = "
                             + parser.getCourse(parser.Courses.get(i).getCode()) + " RUB").build());
         }
-        for (int i = 14; i<21; i++){
+        for (int i = 14; i<21; i++) {
             keyboardButtonsRow3.add(new InlineKeyboardButton().builder()
                     .text(parser.Courses.get(i).getCode())
                     .callbackData(parser.Courses.get(i).getAmount()
                             + " " + parser.Courses.get(i).getCode() + " = "
                             + parser.getCourse(parser.Courses.get(i).getCode()) + " RUB").build());
         }
-        for (int i = 21; i < 28; i++){
+        for (int i = 21; i < 28; i++) {
             keyboardButtonsRow4.add(new InlineKeyboardButton().builder()
                     .text(parser.Courses.get(i).getCode())
                     .callbackData(parser.Courses.get(i).getAmount()
                             + " " + parser.Courses.get(i).getCode() + " = "
                             + parser.getCourse(parser.Courses.get(i).getCode()) + " RUB").build());
         }
-        for (int i = 28; i < parser.Courses.size(); i++){
+        for (int i = 28; i < parser.Courses.size(); i++) {
             keyboardButtonsRow5.add(new InlineKeyboardButton().builder()
                     .text(parser.Courses.get(i).getCode())
                     .callbackData(parser.Courses.get(i).getAmount()
