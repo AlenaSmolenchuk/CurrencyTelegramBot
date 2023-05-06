@@ -28,7 +28,7 @@ public class ConfigBot<def> extends TelegramLongPollingBot {
         if (update.hasMessage()) {
             if (update.getMessage().hasText()) {
                 if (update.getMessage().getText().equals("/start")) {
-                    try {
+                    try { 
                         Parser parser = new Parser();
                         parser.parseUrl();
                         execute(sendInlineKeyBoardMessage(update.getMessage().getChatId(), parser));
