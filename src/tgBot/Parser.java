@@ -40,7 +40,7 @@ public class Parser {
             Courses.add(cource);
         }
      }
-
+ 
      public static String getCourse(String currencyCode){
          return Courses.stream().filter(course -> currencyCode.equals(course.getCode()))
                  .findFirst()
