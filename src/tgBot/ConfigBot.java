@@ -14,7 +14,7 @@ public class ConfigBot<def> extends TelegramLongPollingBot {
     public static String NAME = "CURRENCY_BOT";
 
     @Override
-    public String getBotUsername() {
+    public String getBotUsername()  {
         return NAME;
     }
 
