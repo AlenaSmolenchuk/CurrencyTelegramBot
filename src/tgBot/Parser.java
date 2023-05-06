@@ -9,7 +9,6 @@ import java.net.URL;
 import java.util.ArrayList;
 
 
-
 public class Parser {
 
      private static String url = "http://www.finmarket.ru/currency/rates/";
