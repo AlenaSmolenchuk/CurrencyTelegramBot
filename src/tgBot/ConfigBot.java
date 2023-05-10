@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+ 
 public class ConfigBot<def> extends TelegramLongPollingBot {
     public static String TOKEN = "5156105238:AAG77UUnuTrjq6WrWwVf3UVrSnTZA-CzoNM";
     public static String NAME = "CURRENCY_BOT";
