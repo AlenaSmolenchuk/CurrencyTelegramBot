@@ -21,7 +21,7 @@ public class Parser {
          int index = 0;
          Courses.clear();
          setValues(values , index);
-     }
+     } 
 
      private static Document getPage() throws IOException {
          Document page = Jsoup.parse(new URL(url), 4000);
