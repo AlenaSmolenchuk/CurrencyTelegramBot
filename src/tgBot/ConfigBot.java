@@ -50,7 +50,7 @@ public class ConfigBot<def> extends TelegramLongPollingBot {
             }
         }
     }
- 
+  
     public static SendMessage sendInlineKeyBoardMessage(long chatId, Parser parser) throws IOException {
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
